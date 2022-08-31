@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const div1 = document.createElement("div");
+        div1.id = "lable";
+
+
+        const div2 = document.createElement("div");
+        div2.id = "value";
+
+        const div3 = document.createElement("div");
+        div3.id = "result";
+
+        const lbA = document.createElement("label");
+        lbA.innerText = "Nhập số A: ";
+
+
+        const lbB = document.createElement("label");
+        lbB.innerText = "Nhập số B: ";
+
+        const tagB = document.createElement("b");
+
+        const inputA = document.createElement("input");
+        inputA.id = "aValue";
+        inputA.value=0;
+
+        const inputB = document.createElement("input");
+        inputB.id = "bValue";
+        inputB.value=0;
+
+        const btn = document.createElement("button");
+        btn.id = "result";
+        btn.innerHTML = "Kết quả";
+        btn.style.width = "100px";
+        btn.style.marginLeft = "145px";
+
+        div1.appendChild(lbA);
+        div1.appendChild(inputA);
+        div2.appendChild(lbB);
+        div2.appendChild(inputB);
+        div3.appendChild(btn);
+
+        document.body.append(div1);
+        document.body.append(div2);
+        document.body.append(div3);
+
+        btn.addEventListener("click", myFunction);
+
+        function myFunction() {
+            let kq = document.getElementById("aValue").value*1 + document.getElementById("bValue").value*1 ;
+            alert("Kết quả A + B là: "+kq);
+        }
+    </script>
+</body>
+
+</html>
